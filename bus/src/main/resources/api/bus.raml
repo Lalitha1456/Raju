@@ -1,0 +1,25 @@
+#%RAML 1.0
+title: BUS
+version: v1
+protocols:
+  - HTTP
+mediaType: 
+- application/json
+/bus:
+  post:
+    body:
+      application/json:
+        example:
+          {
+            "Bus no": 1453,
+            "ticket" : 15,
+            "driver" : "raju"
+          }  
+    responses:
+      201:
+        body:
+          application/json:
+            example:
+              {
+                "message" : "bus successfully created"
+              }      
